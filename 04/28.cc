@@ -38,5 +38,7 @@ int main() {
   cout << sizeof(double) << endl;
   cout << "Size of long double is: ";
   cout << sizeof(long double) << endl;
+  cout << "Size of std::nullptr_t is: ";
+  cout << sizeof(std::nullptr_t) << endl;
   return 0;
 }

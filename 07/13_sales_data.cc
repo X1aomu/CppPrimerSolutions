@@ -34,16 +34,20 @@ ostream &print(ostream &, const Sales_data &);
 int main() {
   //cout << "Input ISBN, number of sold and price below, seperated by spaces:\n";
   Sales_data total(cin);
-  Sales_data trans;
-  while (read(cin, trans)) {
-    if (total.isbn() == trans.isbn()) {
-      total.combine(trans);
-    } else {
-      print(cout, total) << endl;
-      total = trans;
+  if (!total.bookNo.empty()) {
+    Sales_data trans;
+    while (read(cin, trans)) {
+      if (total.isbn() == trans.isbn()) {
+        total.combine(trans);
+      } else {
+        print(cout, total) << endl;
+        total = trans;
+      }
     }
+    print(cout, total) << endl;
+  } else {
+    cerr << "No data?!" << endl;
   }
-  print(cout, total) << endl;
   return 0;
 }
 
