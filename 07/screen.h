@@ -11,7 +11,6 @@ class Screen {
       : _heigth(ht), _width(wd) _contents(ht * wd, c) {}
   // member functions
   inline char Get() const { return _contents[_cursor]; }
-  char Screen::Get(const pos &ht, const pos &wd) const;
   char Get(const pos &ht, const pos &wd) const;
   class Screen &Move(const pos &r, const pos &c);
 
