@@ -12,11 +12,13 @@ class Sales_data {
 
  public:
   // Constructors
-  Sales_data() = default;
-  Sales_data(const std::string &s) : _bookNo(s){};
   Sales_data(const std::string &s, unsigned n, double p)
       : _bookNo(s), _units_sold(n), _revenue(n * p) {}
-  Sales_data(std::istream &is) { read(is, *this); } // Loop dependancy
+  Sales_data() = Sales_data("", 0, 0);
+  Sales_data(const std::string &s) : Sales_data(s, 0, 0){};
+  Sales_data(std::istream &is) : Sales_data("", 0, 0) {
+    read(is, *this);
+  } // Loop dependancy
   // member functions
   inline std::string isbn() const { return _bookNo; };
   class Sales_data &combine(const Sales_data &);

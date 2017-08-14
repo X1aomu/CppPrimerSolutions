@@ -21,10 +21,10 @@ class Screen {
  public:
   using pos = std::string::size_type;
   // constructors
-  Screen() = default;
-  Screen(pos ht, pos wd) : _height(ht), _width(wd), _contents(ht * wd, ' ') {}
   Screen(pos ht, pos wd, char c)
       : _height(ht), _width(wd), _contents(ht * wd, c) {}
+  Screen() : Screen(0, 0, 'a') {}  // 'a' can be replaced by any char
+  Screen(pos ht, pos wd) : Screen(ht, wd, ' ') {}
   // member functions
   char Get() const;
   char Get(const pos &ht, const pos &wd) const;
