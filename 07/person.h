@@ -5,25 +5,25 @@ class Person {
  public:
   // constructors
   Person() = default;
-  Person(const std::string &name): _name(name) {}
+  Person(const std::string &name): name_(name) {}
   Person(const std::string &name, const std::string &addr)
-      : _name(name), _address(addr) {}
+      : name_(name), address_(addr) {}
   // member functions
-  inline std::string name() const { return _name; }
-  inline std::string address() const { return _address; }
+  inline std::string name() const { return name_; }
+  inline std::string address() const { return address_; }
   std::istream &read(std::istream &);
   std::ostream &print(std::ostream &) const;
  private:
-  std::string _name;
-  std::string _address;
+  std::string name_;
+  std::string address_;
 };
 
 inline std::istream &Person::read(std::istream &is) {
-  is >> _name >> _address;
+  is >> name_ >> address_;
   return is;
 }
 
 inline std::ostream &Person::print(std::ostream &os) const {
-  os << _name << ' ' <<  _address;
+  os << name_ << ' ' <<  address_;
   return os;
 }
