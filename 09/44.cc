@@ -6,7 +6,7 @@ using std::string;
 void ReplaceString(string &s, const string &old_val, const string &new_val) {
   auto old_size = old_val.size();
   if (s.size() && old_size && old_size <= s.size()) {
-    // search from beg to end_of_begin - 1
+    // search from replace_start to end_of_start - 1
     string::size_type replace_start = 0;
     decltype(replace_start) end_of_start = s.size() - old_size + 1;
     while (replace_start != end_of_start) {
