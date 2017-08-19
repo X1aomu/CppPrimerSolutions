@@ -2,7 +2,7 @@
 # DO NOT DELETE THIS FILE
 
 CC = g++
-CCFLAGS = -Og -Wall -Wextra -ggdb -lm -std=c++11
+CCFLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb -lm
 INCLUDES =
 
 CC_SRCS = $(wildcard *.cc)
