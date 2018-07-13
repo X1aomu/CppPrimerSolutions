@@ -4,14 +4,13 @@
 using std::string;
 
 class Person {
- public:
+public:
   string name() const { return _name; };
   string address() const { return _address; };
- private:
+
+private:
   string _name;
   string _address;
 };
 
-int main() {
-  return 0;
-}
+int main() { return 0; }

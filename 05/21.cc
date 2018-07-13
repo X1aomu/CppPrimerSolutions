@@ -1,10 +1,10 @@
+#include <cctype>
 #include <iostream>
 #include <string>
-#include <cctype>
 
+using std::cerr;
 using std::cin;
 using std::cout;
-using std::cerr;
 using std::endl;
 using std::string;
 
@@ -13,7 +13,7 @@ int main() {
   if (cin >> pre_str) {
     while (cin >> str) {
       if (str == pre_str && isupper(str[0])) {
-	break;
+        break;
       }
       pre_str = str;
     }

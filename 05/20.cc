@@ -1,9 +1,9 @@
 #include <iostream>
 #include <string>
 
+using std::cerr;
 using std::cin;
 using std::cout;
-using std::cerr;
 using std::endl;
 using std::string;
 
@@ -12,7 +12,7 @@ int main() {
   if (cin >> pre_str) {
     while (cin >> str) {
       if (str == pre_str) {
-	break;
+        break;
       }
       pre_str = str;
     }

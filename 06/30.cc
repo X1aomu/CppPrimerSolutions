@@ -2,9 +2,9 @@
 #include <string>
 #include <vector>
 
+using std::cerr;
 using std::cin;
 using std::cout;
-using std::cerr;
 using std::endl;
 using std::string;
 using std::vector;
@@ -25,7 +25,9 @@ int main() {
   string s1, s2;
   cout << "Input two strings: ";
   cin >> s1 >> s2;
-  if (str_subrange(s1, s2)) cout << "One is the other's subset." << endl;
-  else cout << "No one is the other's subset." << endl;
+  if (str_subrange(s1, s2))
+    cout << "One is the other's subset." << endl;
+  else
+    cout << "No one is the other's subset." << endl;
   return 0;
 }

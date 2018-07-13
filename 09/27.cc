@@ -4,11 +4,11 @@
 
 int main() {
   std::forward_list<int> ilst;
-  for (int i; std::cin >> i; ) {
-    ilst.push_front(i);  // reverse insertion
+  for (int i; std::cin >> i;) {
+    ilst.push_front(i); // reverse insertion
   }
   for (auto prev = ilst.before_begin(), curr = ilst.begin();
-       curr != ilst.end(); ) {
+       curr != ilst.end();) {
     if (*curr % 2 == 1) {
       curr = ilst.erase_after(prev);
     } else {

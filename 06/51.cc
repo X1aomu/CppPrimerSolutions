@@ -3,8 +3,8 @@
 #include <vector>
 
 using std::cin;
-using std::cout;
 using std::clog;
+using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
@@ -34,7 +34,7 @@ void f(double a, double b = 3.14) {
 }
 
 int main() {
-  //f(2.56, 42);  // This calling is ambiguous.
+  // f(2.56, 42);  // This calling is ambiguous.
   f(42);
   f(42, 0);
   f(2.56, 3.14);

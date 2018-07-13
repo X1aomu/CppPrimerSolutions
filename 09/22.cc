@@ -8,7 +8,7 @@ using std::vector;
 
 int main() {
   vector<int> iv;
-  for (int temp; cin >> temp; ) {
+  for (int temp; cin >> temp;) {
     iv.push_back(temp);
   }
   vector<int>::iterator iter = iv.begin(), mid = iv.begin() + iv.size() / 2;

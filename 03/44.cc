@@ -1,12 +1,12 @@
 #include <iostream>
 #include <iterator>
 
+using std::begin;
+using std::cerr;
 using std::cin;
 using std::cout;
-using std::cerr;
-using std::endl;
-using std::begin;
 using std::end;
+using std::endl;
 
 using int_array_2d = int[3][4];
 using int_array = int[4];

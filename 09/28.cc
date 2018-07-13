@@ -4,8 +4,9 @@
 
 using StringList = std::forward_list<std::string>;
 
-StringList::iterator ListInsertAfterString(
-    StringList &list, const std::string &to_find, const std::string &str) {
+StringList::iterator ListInsertAfterString(StringList &list,
+                                           const std::string &to_find,
+                                           const std::string &str) {
   StringList::iterator prev = list.before_begin(), curr = list.begin();
   while (curr != list.end()) {
     if (*curr != to_find) {

@@ -4,11 +4,9 @@
 using std::string;
 
 class Person {
- public:
+public:
   string name;
   string address;
 };
 
-int main() {
-  return 0;
-}
+int main() { return 0; }

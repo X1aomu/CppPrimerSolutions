@@ -2,8 +2,7 @@
 #include <vector>
 
 void TestIntVector(const std::vector<int> &ivec) {
-  std::cout << "\tsize " << ivec.size()
-            << " capacity " << ivec.capacity()
+  std::cout << "\tsize " << ivec.size() << " capacity " << ivec.capacity()
             << std::endl;
 }
 
