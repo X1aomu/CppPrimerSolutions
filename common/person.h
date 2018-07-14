@@ -2,10 +2,10 @@
 #include <string>
 
 class Person {
- public:
+public:
   // constructors
   Person() = default;
-  Person(const std::string &name): name_(name) {}
+  Person(const std::string &name) : name_(name) {}
   Person(const std::string &name, const std::string &addr)
       : name_(name), address_(addr) {}
   // member functions
@@ -13,7 +13,8 @@ class Person {
   inline std::string address() const { return address_; }
   std::istream &read(std::istream &);
   std::ostream &print(std::ostream &) const;
- private:
+
+private:
   std::string name_;
   std::string address_;
 };
@@ -24,6 +25,6 @@ inline std::istream &Person::read(std::istream &is) {
 }
 
 inline std::ostream &Person::print(std::ostream &os) const {
-  os << name_ << ' ' <<  address_;
+  os << name_ << ' ' << address_;
   return os;
 }

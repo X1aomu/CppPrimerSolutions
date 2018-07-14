@@ -1,22 +1,22 @@
 # Thie file is the template for all Makefiles
 # DO NOT DELETE THIS FILE
 
-CC = g++
-CCFLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb -lm
-INCLUDES =
+CXX = g++
+CXXFLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb -lm
+INCLUDES = -I..
 
-CC_SRCS = $(wildcard *.cc)
-CC_BINS = $(patsubst %.cc, %, $(CC_SRCS))
+CXX_SRCS = $(wildcard *.cc)
+CXX_BINS = $(patsubst %.cc, %, $(CXX_SRCS))
 
 .PHONY: all
 
-all: $(CC_BINS)
+all: $(CXX_BINS)
 
 %: %.cc
-	-$(CC) $(CCFLAGS) $(INCLUDES) -o $@ $<
+	-$(CXX) $(CXXFLAGS) $(INCLUDES) -o $@ $<
 
 clean:
 	rm -f *\~ .*.un\~
 
 clobber: clean
-	rm -f $(CC_BINS)
+	rm -f $(CXX_BINS)

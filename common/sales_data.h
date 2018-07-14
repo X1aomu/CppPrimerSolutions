@@ -10,7 +10,7 @@ class Sales_data {
   friend std::istream &read(std::istream &, Sales_data &);
   friend std::ostream &print(std::ostream &, const Sales_data &);
 
- public:
+public:
   // Constructors
   Sales_data(const std::string &s, unsigned n, double p)
       : bookNo_(s), units_sold_(n), revenue_(n * p) {}
@@ -23,7 +23,7 @@ class Sales_data {
   inline std::string isbn() const { return bookNo_; };
   class Sales_data &combine(const Sales_data &);
 
- private:
+private:
   std::string bookNo_;
   unsigned units_sold_ = 0;
   double revenue_ = 0.0;
