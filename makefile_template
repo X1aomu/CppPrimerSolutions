@@ -2,21 +2,15 @@
 # DO NOT DELETE THIS FILE
 
 CXX = g++
-CXXFLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb -lm
-INCLUDES = -I..
+CXXFLAGS = -pipe -std=c++14 -pedantic-errors -Wall -Wextra -ggdb -lm -I..
 
-CXX_SRCS = $(wildcard *.cc)
-CXX_BINS = $(patsubst %.cc, %, $(CXX_SRCS))
-
-.PHONY: all
-
-all: $(CXX_BINS)
-
-%: %.cc
-	-$(CXX) $(CXXFLAGS) $(INCLUDES) -o $@ $<
+all: $(TARGETS)
 
 clean:
 	rm -f *\~ .*.un\~
+	rm -f *.o
 
 clobber: clean
-	rm -f $(CXX_BINS)
+	rm -f $(TARGETS)
+
+.PHONY: all
