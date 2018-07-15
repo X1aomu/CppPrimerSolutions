@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "07/person.h"
+#include "common/person.h"
 
 int main(void) {
   int var;

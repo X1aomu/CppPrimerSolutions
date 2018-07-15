@@ -1,4 +1,5 @@
-#include "screen.h"
+#include "common/screen.h"
+
 #include <iostream>
 
 using std::cout;
