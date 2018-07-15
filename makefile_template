@@ -2,7 +2,7 @@
 # DO NOT DELETE THIS FILE
 
 CXX = g++
-CXXFLAGS = -pipe -std=c++14 -pedantic-errors -Wall -Wextra -ggdb -lm -I..
+CXXFLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb -lm -I..
 
 all: $(TARGETS)
 

@@ -1,25 +1,24 @@
-#include <istd::ostream>
+#ifndef CPP_PRIMER_SALES_DATA_H_
+#define CPP_PRIMER_SALES_DATA_H_
+
+#include <iostream>
 #include <string>
 
-// struct Sales_data and function read must be declared here because of loop
-// dependancy
-inline std::istream &read(std::istream &, Sales_data &);
-inline std::ostream &print(std::ostream &, const Sales_data &);
+namespace cpp_primer {
+
+class Sales_data;
 
 class Sales_data {
   friend std::istream &read(std::istream &, Sales_data &);
   friend std::ostream &print(std::ostream &, const Sales_data &);
 
 public:
-  // Constructors
   Sales_data(const std::string &s, unsigned n, double p)
       : bookNo_(s), units_sold_(n), revenue_(n * p) {}
-  Sales_data() = Sales_data("", 0, 0);
+  Sales_data() = default;
   Sales_data(const std::string &s) : Sales_data(s, 0, 0){};
-  Sales_data(std::istream &is) : Sales_data("", 0, 0) {
-    read(is, *this);
-  } // Loop dependancy
-  // member functions
+  Sales_data(std::istream &is) : Sales_data("", 0, 0) { read(is, *this); }
+
   inline std::string isbn() const { return bookNo_; };
   class Sales_data &combine(const Sales_data &);
 
@@ -58,3 +57,7 @@ class Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
   sum.combine(rhs);
   return sum;
 }
+
+} // namespace cpp_primer
+
+#endif

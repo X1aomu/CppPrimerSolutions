@@ -1,6 +1,11 @@
+#ifndef CPP_PRIMER_SCREEN_H_
+#define CPP_PRIMER_SCREEN_H_
+
 #include <iostream>
 #include <string>
 #include <vector>
+
+namespace cpp_primer {
 
 class Screen;
 
@@ -81,3 +86,7 @@ inline const Screen &Screen::Display(std::ostream &os) const {
 }
 // Screen::DoDisplay
 void Screen::DoDisplay(std::ostream &os) const { os << contents_; }
+
+} // namespace cpp_primer
+
+#endif
