@@ -2,12 +2,17 @@
 # DO NOT DELETE THIS FILE
 
 CXX = g++
-CXXFLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb -lm -I..
+LDFLAGS = -lstdc++ -lm
+FLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb
+INC = -I..
+CXXFLAGS = $(FLAGS) $(INC)
 
 all: $(TARGETS)
 
+%.o: %.h
+
 clean:
-	rm -f *\~ .*.un\~
+	find -iname "*un~" -delete
 	rm -f *.o
 
 clobber: clean
