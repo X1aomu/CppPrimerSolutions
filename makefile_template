@@ -1,13 +1,16 @@
 # Thie file is the template for all Makefiles
 # DO NOT DELETE THIS FILE
 
+LDFLAGS = -lstdc++
 CXX = g++
-LDFLAGS = -lstdc++ -lm
 FLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb
 INC = -I..
 CXXFLAGS = $(FLAGS) $(INC)
 
 all: $(TARGETS)
+
+# Force to build *.o files first
+$(TARGETS): %: %.o # a Static Pattern Rule
 
 %.o: %.h
 
