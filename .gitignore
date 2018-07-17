@@ -1,3 +1,15 @@
+# Exclude all file
+*
+
+# Re-include all files except those without dot
+!/**/
+!*.*
+
+# Re-include special files
+!LICENSE
+!Makefile
+!/makefile_template
+
 # vim backup files
 .*.un\~
 *\~

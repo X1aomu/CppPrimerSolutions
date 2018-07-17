@@ -19,7 +19,7 @@ struct PersonInfo {
 };
 
 int main() {
-  const string input_file("data/13");
+  const string input_file("data/13.txt");
   ifstream input(input_file);
   if (input) {
     string line, word;

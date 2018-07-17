@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-  const string input_file("data/20");
+  const string input_file("data/20.txt");
   ifstream input(input_file);
   if (!input) {
     cout << "Couldn't find data file "

@@ -11,7 +11,7 @@ void func(std::vector<std::string> &vec, std::ifstream &is) {
 }
 
 int main() {
-  const std::string file_input("data/04");
+  const std::string file_input("data/04.txt");
   std::ifstream input(file_input);
   std::vector<std::string> vec;
   if (input) {

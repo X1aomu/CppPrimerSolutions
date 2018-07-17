@@ -5,7 +5,7 @@
 #include <vector>
 
 int main() {
-  const std::string file_input("data/10");
+  const std::string file_input("data/10.txt");
   std::ifstream input(file_input);
   std::vector<std::string> vec;
   if (input) {
