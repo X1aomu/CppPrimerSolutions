@@ -4,7 +4,7 @@
 
 using namespace std;
 
-using cpp_primer::TextQuery;
+using cps::TextQuery;
 
 void RunQueries(ifstream &infile) {
   TextQuery tq((infile));

@@ -1,10 +1,10 @@
-#ifndef CPP_PRIMER_SALES_DATA_H_
-#define CPP_PRIMER_SALES_DATA_H_
+#ifndef CPS_SALES_DATA_H_
+#define CPS_SALES_DATA_H_
 
 #include <iostream>
 #include <string>
 
-namespace cpp_primer {
+namespace cps {
 
 class Sales_data;
 
@@ -58,6 +58,6 @@ class Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
   return sum;
 }
 
-} // namespace cpp_primer
+} // namespace cps
 
 #endif

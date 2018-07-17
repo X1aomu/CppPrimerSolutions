@@ -1,5 +1,5 @@
-#ifndef CPP_PRIMER_CP13_EX27_HAS_PTR_H_
-#define CPP_PRIMER_CP13_EX27_HAS_PTR_H_
+#ifndef CPS_CP13_EX27_HAS_PTR_H_
+#define CPS_CP13_EX27_HAS_PTR_H_
 
 #include <string>
 

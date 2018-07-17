@@ -1,5 +1,5 @@
-#ifndef CPP_PRIMER_CP13_EX05_H_
-#define CPP_PRIMER_CP13_EX05_H_
+#ifndef CPS_CP13_EX05_H_
+#define CPS_CP13_EX05_H_
 
 #include <string>
 

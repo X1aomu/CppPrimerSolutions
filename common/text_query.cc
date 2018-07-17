@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-namespace cpp_primer {
+namespace cps {
 
 using std::istringstream;
 using std::set;
@@ -71,4 +71,4 @@ std::shared_ptr<TextQuery::InputType> QueryResult::get_file() const {
   return file_ptr_;
 }
 
-} // namespace cpp_primer
+} // namespace cps

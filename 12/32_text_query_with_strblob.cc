@@ -4,7 +4,7 @@
 
 #include "common/str_blob.h"
 
-namespace cpp_primer {
+namespace cps {
 
 using std::istringstream;
 using std::set;
@@ -63,4 +63,4 @@ std::ostream &QueryResult::Print(std::ostream &os) {
   return os;
 }
 
-} // namespace cpp_primer
+} // namespace cps

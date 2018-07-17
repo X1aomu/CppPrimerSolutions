@@ -1,12 +1,12 @@
-#ifndef CPP_PRIMER_CP13_EX26_STR_BLOB_H_
-#define CPP_PRIMER_CP13_EX26_STR_BLOB_H_
+#ifndef CPS_CP13_EX26_STR_BLOB_H_
+#define CPS_CP13_EX26_STR_BLOB_H_
 
 #include <memory>
 #include <stdexcept>
 #include <string>
 #include <vector>
 
-namespace cpp_primer {
+namespace cps {
 
 class StrBlobPtr;
 class ConstStrBlobPtr;
@@ -143,6 +143,6 @@ private:
   }
 };
 
-} // namespace cpp_primer
+} // namespace cps
 
 #endif

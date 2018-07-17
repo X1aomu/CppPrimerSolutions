@@ -15,7 +15,7 @@ int main() {
   }
 
   string line;
-  cpp_primer::StrBlob str_blob;
+  cps::StrBlob str_blob;
   while (getline(input, line)) {
     str_blob.push_back(line);
   }

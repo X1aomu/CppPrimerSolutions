@@ -1,5 +1,5 @@
-#ifndef CPP_PRIMER_TEXT_QUERY_WITH_STRBLOB_H_
-#define CPP_PRIMER_TEXT_QUERY_WITH_STRBLOB_H_
+#ifndef CPS_TEXT_QUERY_WITH_STRBLOB_H_
+#define CPS_TEXT_QUERY_WITH_STRBLOB_H_
 
 #include <fstream>
 #include <iostream>
@@ -11,7 +11,7 @@
 
 #include "common/str_blob.h"
 
-namespace cpp_primer {
+namespace cps {
 
 class QueryResult;
 
@@ -45,6 +45,6 @@ private:
   const std::shared_ptr<TextQuery::InputType> file_ptr_;
 };
 
-} // namespace cpp_primer
+} // namespace cps
 
 #endif

@@ -1,6 +1,6 @@
 #include "common/str_blob.h"
 
-namespace cpp_primer {
+namespace cps {
 
 StrBlobPtr StrBlob::begin() { return StrBlobPtr(*this); }
 
@@ -12,4 +12,4 @@ ConstStrBlobPtr StrBlob::cend() const {
   return ConstStrBlobPtr(*this, data_->size());
 }
 
-} // namespace cpp_primer
+} // namespace cps

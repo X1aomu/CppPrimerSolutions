@@ -1,10 +1,10 @@
-#ifndef CPP_PRIMER_PERSON_H_
-#define CPP_PRIMER_PERSON_H_
+#ifndef CPS_PERSON_H_
+#define CPS_PERSON_H_
 
 #include <iostream>
 #include <string>
 
-namespace cpp_primer {
+namespace cps {
 
 class Person {
 public:
@@ -34,6 +34,6 @@ inline std::ostream &Person::print(std::ostream &os) const {
   return os;
 }
 
-} // namespace cpp_primer
+} // namespace cps
 
 #endif

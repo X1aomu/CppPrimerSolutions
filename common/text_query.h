@@ -1,5 +1,5 @@
-#ifndef CPP_PRIMER_TEXT_QUERY_H_
-#define CPP_PRIMER_TEXT_QUERY_H_
+#ifndef CPS_TEXT_QUERY_H_
+#define CPS_TEXT_QUERY_H_
 
 #include <fstream>
 #include <iostream>
@@ -9,7 +9,7 @@
 #include <sstream>
 #include <vector>
 
-namespace cpp_primer {
+namespace cps {
 
 class QueryResult;
 
@@ -48,6 +48,6 @@ private:
   std::shared_ptr<TextQuery::InputType> file_ptr_;
 };
 
-} // namespace cpp_primer
+} // namespace cps
 
 #endif
