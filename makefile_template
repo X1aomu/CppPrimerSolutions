@@ -11,10 +11,10 @@ all: $(TARGETS)
 
 # Force to build *.o files first
 $(TARGETS): %: %.o # a Static Pattern Rule
-	$(CXX) $(LDFLAGS) $^ -o $@
+	$(CXX) $(LDFLAGS) -o $@ $^
 
 %.o: %.cc
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 %.o: %.h
 
