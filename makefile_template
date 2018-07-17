@@ -15,7 +15,6 @@ $(TARGETS): %: %.o # a Static Pattern Rule
 %.o: %.h
 
 clean:
-	find -iname "*un~" -delete
 	rm -f *.o
 
 clobber: clean
