@@ -7,6 +7,9 @@ FLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -O0 -g
 INC = -I..
 CXXFLAGS = $(FLAGS) $(INC)
 
+SOURCES = $(wildcard *.cc)
+HEADERS = $(wildcard *.h)
+
 all: $(TARGETS)
 
 # Force to build *.o files first
@@ -16,7 +19,8 @@ $(TARGETS): %: %.o # a Static Pattern Rule
 %.o: %.cc
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-%.o: %.h
+# make *.h perceivable
+$(patsubst %.h, %.o, $(HEADERS)): %.o: %.h
 
 clean:
 	rm -f *.o
