@@ -3,7 +3,7 @@
 
 LDFLAGS = -lstdc++
 CXX = g++
-FLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -ggdb
+FLAGS = -pipe -std=c++11 -pedantic-errors -Wall -Wextra -O0 -g
 INC = -I..
 CXXFLAGS = $(FLAGS) $(INC)
 
