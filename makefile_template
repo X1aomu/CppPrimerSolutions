@@ -16,7 +16,7 @@ all: $(TARGETS)
 $(TARGETS): %: %.o # a Static Pattern Rule
 	$(CXX) $(LDFLAGS) -o $@ $^
 
-%.o: %.cc
+$(patsubst %.cc, %.o, $(SOURCES)): %.o: %.cc
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 # make *.h perceivable
