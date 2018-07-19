@@ -1,4 +1,4 @@
-TARGETS = 31_test 42_test 48_test_47 50_test
+TARGETS = 31_test 42_test 48_test_47 50_test 58
 
 include ../makefile_template
 

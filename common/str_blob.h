@@ -4,6 +4,7 @@
 #include <memory>
 #include <stdexcept>
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace cps {
@@ -27,6 +28,8 @@ public:
   bool empty() const { return data_->empty(); }
 
   void push_back(const std::string &t) { data_->push_back(t); }
+  // added for ex13.55 in section 13.6.3
+  void push_back(std::string &&t) { data_->push_back(std::move(t)); }
   void pop_back() {
     check(0, "pop_back on empty StrBlob");
     data_->pop_back();
