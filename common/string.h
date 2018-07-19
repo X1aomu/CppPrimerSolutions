@@ -27,8 +27,7 @@ public:
   const char *cbegin() const { return c_; }
   const char *cend() const { return end_; }
 
-  size_t length() const { return end_ - c_; }
-  size_t size() const { return end_ - c_; }
+  size_t length() const { return end_ - c_ - 1; }
   size_t capacity() const { return cap_ - c_; }
   void reserve(const size_t &n);
   void resize(const size_t &size, const char &c = char());
@@ -39,6 +38,8 @@ private:
   char *c_;
   char *end_;
   char *cap_;
+
+  size_t size() const { return end_ - c_; }
 
   std::pair<char *, char *> alloc_n_copy(const char *b, const char *e);
   void reallocate();
