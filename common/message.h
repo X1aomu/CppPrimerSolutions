@@ -18,6 +18,8 @@ public:
   ~Message();
   Message(const Message &);
   Message &operator=(const Message &);
+  Message(Message &&);
+  Message &operator=(Message &&);
 
   void SaveTo(Folder &f);
   void RemoveFrom(Folder &f);
@@ -25,6 +27,8 @@ public:
 private:
   std::string contents_;
   std::set<Folder *> folders_;
+
+  void moveFolders(Message *m); // move m's folders to this'
 
   void addFolder(Folder *f);
   void rmFolder(Folder *f);

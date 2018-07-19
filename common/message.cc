@@ -19,6 +19,17 @@ Message &Message::operator=(const Message &rhs) {
   addToFolders(rhs);
   return *this;
 }
+Message::Message(Message &&m) : contents_(std::move(m.contents_)) {
+  moveFolders(&m);
+}
+Message &Message::operator=(Message &&rhs) {
+  if (this != &rhs) {
+    removeFromFolders();
+    contents_ = std::move(rhs.contents_);
+    moveFolders(&rhs);
+  }
+  return *this;
+}
 
 void Message::SaveTo(Folder &f) {
   addFolder(&f);
@@ -27,6 +38,15 @@ void Message::SaveTo(Folder &f) {
 void Message::RemoveFrom(Folder &f) {
   rmFolder(&f);
   f.rmMsg(this);
+}
+
+void Message::moveFolders(Message *m) {
+  folders_ = std::move(m->folders_);
+  for (auto f : folders_) {
+    f->rmMsg(m);
+    f->addMsg(this);
+  }
+  m->folders_.clear();
 }
 
 void Message::addFolder(Folder *f) { folders_.insert(f); }

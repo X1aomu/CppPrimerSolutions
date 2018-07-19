@@ -1,4 +1,4 @@
-TARGETS = 31_test 42_test 48_test_47
+TARGETS = 31_test 42_test 48_test_47 50_test
 
 include ../makefile_template
 
@@ -7,3 +7,5 @@ include ../makefile_template
 42_test: 42_text_query.o ../common/str_vec.o
 
 48_test_47: 47_string.o
+
+50_test: 50_string.o

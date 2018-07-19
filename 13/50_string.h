@@ -2,8 +2,9 @@
 #define CPS_STRING_H_
 
 #include <algorithm> // std::for_each
-#include <memory>    // std::allocator
-#include <utility>   // std::move
+#include <iostream>
+#include <memory>  // std::allocator
+#include <utility> // std::move
 
 namespace cps {
 
@@ -81,12 +82,15 @@ inline String::String(const char *c) {
 inline String::~String() { free(); }
 
 inline String::String(const String &s) {
+  std::cout << "Calling copy constructor ..." << std::endl; // add for ex13.47
   auto newdata = alloc_n_copy(s.cbegin(), s.cend());
   c_ = newdata.first;
   end_ = cap_ = newdata.second;
 }
 
 inline String &String::operator=(const String &rhs) {
+  std::cout << "Calling assignment function ..."
+            << std::endl; // add for ex13.47
   auto newdata = alloc_n_copy(rhs.cbegin(), rhs.cend());
   free(); // free old data
   c_ = newdata.first;
@@ -96,11 +100,13 @@ inline String &String::operator=(const String &rhs) {
 
 inline String::String(String &&s) noexcept
     : c_(s.c_), end_(s.end_), cap_(s.cap_) {
+  std::cout << "calling moving constructor ..." << std::endl;
   s.c_ = s.end_ = s.cap_ = nullptr;
 }
 
 inline String &String::operator=(String &&rhs) noexcept {
   if (this != &rhs) {
+    std::cout << "calling moving assignment function ..." << std::endl;
     c_ = rhs.c_;
     end_ = rhs.end_;
     cap_ = rhs.cap_;
